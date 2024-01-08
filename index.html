@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма регистрации для Задания 1</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <script>
+// (A) ALERT
+function demoA () { alert("Message"); }
+}
+</script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Регистрация участников конференции</h1>
+    <form name="registration" class="registartion-form" onsubmit="return formValidation()">
+      <table>
+        <tr>
+          <td><label for="name">ФИО:</label></td>
+          <td><input type="text" name="name" id="name" placeholder="Ваши ФИО" required pattern="[А-Яа-яЁё]{6,}"></td>
+        </tr>
+        <tr>
+          <td><label for="phone">Телефон: (+7)</label></td>
+          <td><input type="text" name="phone" id="phone" placeholder="Ваш телефон" required pattern="[0-9]{10}"></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td><input type="email" name="email" id="email" required></td>
+        </tr>
+		<tr>
+          <td><label for="listOfconf">Список конференций:</label></td>
+          <td>
+            <select name="listOfconf" id="listOfconf" required>
+              <option value="">Выберите нужную</option>
+              <option value="Math">Математика</option>
+              <option value="Physics">Физика</option>
+              <option value="Inform">Информатика</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="date">Дата рождения:</label></td>
+          <td><input type="date" name="date" id="date"></td>
+        </tr>
+        <tr>
+          <td><label for="talk">Будете докладывать?</label></td>
+          <td>
+            Да<input type="radio" name="talk" value="да" required>
+            Нет<input type="radio" name="talk" value="нет" required>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="theme">Тема доклада:</label></td>
+          <td><input type="text" name="theme" id="theme" required></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="submit" class="submit" value="Отправить свои данные"></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</body>
+</html>
